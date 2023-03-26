@@ -7,3 +7,5 @@ eureka:
 spring:
   application:
     name: eureka-server
+  fetch-registry: true
+  register-with-eureka: true
