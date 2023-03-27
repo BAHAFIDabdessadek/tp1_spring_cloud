@@ -1,23 +1,5 @@
-server:
-  port: 8081
-
 spring:
   application:
-    name: Fraud-service
-  datasource:
-    username: 'root'
-    password:
-    url: jdbc:mysql://localhost:3306/cigma_spring_cloud_CUSTOMER?serverTimezone=UTC
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-        format_sql: true
-    hibernate:
-      ddl-auto: create-drop
-      show-sql: true
-
-Eureka:
-  client:
-    server-url:
-      defaultZone: http://localhost:8761/eureka
+    name: fraud-service
+  config:
+    import: optional:configserver:http://localhost:8888
